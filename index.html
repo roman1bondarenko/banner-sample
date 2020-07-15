@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title></title>
+<script>
+
+var clickTag="";
+(function(tweenui) {
+var timeline;
+var loop=-1;
+var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+var firefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+function startPlaying() { if (loop<0) timeline.play(0); else { if (loop>0){loop--;timeline.play(0)}}}
+function g(name) { name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]"); var regex = new RegExp("[\\?&]" + name + "=([^&#]*)","i"); var results = regex.exec(window.location.search); if(results == null) return ""; else return decodeURIComponent(results[1].replace(/\+/g, " ")); }
+function gl(a){for(var i=0;i<a.length;++i){var x=g(a[i]);if (x!='')return x;}return '';}
+var res = function() { var bd = document.getElementsByTagName('body')[0];if (firefox) {bd.style.mozTransform = 'scale(' + window.innerWidth/300 + ')';bd.style.transform = 'scale(' + window.innerWidth/300 + ')';} else {bd.style.zoom = window.innerWidth/300;}if (iOS) { setTimeout(function() {window.onresize = ires},100) } else { window.onresize = res }bd.style.display = '';}
+var ires = function() { if (window.onresize) { window.onresize = null; var bd = document.getElementsByTagName('body')[0]; bd.style.display = 'none'; setTimeout(res, 500); }}
+var loadcnt = 3;
+function tui_go() {
+--loadcnt; if (loadcnt==0) {
+if (typeof(tweenui.exp) == "function") { tweenui.exp(); }
+if (g('s')==1) { res();if (iOS) { window.addEventListener('orientationchange', ires, false) }}
+document.getElementsByTagName('body')[0].style.opacity=1;
+startPlaying();
+}
+}
+tweenui.init = function() {
+timeline = new TimelineLite({paused:true, onComplete:startPlaying});
+TweenLite.defaultOverwrite = "none";
+timeline.insert(new TweenLite({}, 0.0, {}), 28.52);
+var layer_1 = document.getElementById("tui-12");
+timeline.insert(TweenLite.to(layer_1, 1.148764769065521, {css: {autoAlpha: 1.0}, ease: Power1.easeOut}), 23.235682062298604);
+timeline.insert(TweenLite.to(layer_1, 1.148764769065521, {css: {autoAlpha: 0.0}, ease: Power1.easeOut}), 27.126165413533833);
+timeline.insert(TweenLite.to(layer_1, 1.144264785675529, {css: {autoAlpha: 1.0}, ease: Power1.easeOut}), 0.2564731416169289);
+timeline.insert(TweenLite.to(layer_1, 1.144264785675529, {css: {autoAlpha: 0.0}, ease: Power1.easeOut}), 4.143027672273467);
+timeline.insert(TweenLite.to(layer_1, 1.144264785675529, {css: {autoAlpha: 1.0}, ease: Power1.easeOut}), 11.827357569180684);
+timeline.insert(TweenLite.to(layer_1, 1.144264785675529, {css: {autoAlpha: 0.0}, ease: Power1.easeOut}), 15.713912099837222);
+TweenLite.set(layer_1, {css: {autoAlpha: 0.0, x: -102, y: -46, scale: 0.5, rotationX: 0.0, rotationY: 0.0, rotationZ: 0.0}});
+var layer_2 = document.getElementById("tui-13");
+timeline.insert(TweenLite.to(layer_2, 1.0653499728703202, {css: {autoAlpha: 1.0}, ease: Power1.easeOut}), 5.977797069994574);
+timeline.insert(TweenLite.to(layer_2, 1.0722100656455142, {css: {autoAlpha: 0.0}, ease: Power1.easeOut}), 10.078774617067833);
+timeline.insert(TweenLite.to(layer_2, 1.0722100656455142, {css: {autoAlpha: 1.0}, ease: Power1.easeOut}), 17.61487964989059);
+timeline.insert(TweenLite.to(layer_2, 1.0722100656455142, {css: {autoAlpha: 0.0}, ease: Power1.easeOut}), 21.719912472647703);
+TweenLite.set(layer_2, {css: {autoAlpha: 0.0, x: -102, y: -44, scale: 0.5, rotationX: 0.0, rotationY: 0.0, rotationZ: 0.0}});
+var layer_3 = document.getElementById("tui-11");
+TweenLite.set(layer_3, {css: {autoAlpha: 1.0, x: -30, y: 464, scale: 0.5, rotationX: 0.0, rotationY: 0.0, rotationZ: 0.0}});
+var layer_4 = document.getElementById("tui-10");
+timeline.insert(TweenLite.to(layer_4, 0.8730612244897958, {css: {scale: 0.55}, ease: Power1.easeOut}), 18.70189044038668);
+timeline.insert(TweenLite.to(layer_4, 0.8730612244897958, {css: {autoAlpha: 1.0}, ease: Power1.easeOut}), 18.71720730397422);
+timeline.insert(TweenLite.to(layer_4, 0.8730612244897958, {css: {scale: 0.5}, ease: Power1.easeOut}), 19.636219119226638);
+timeline.insert(TweenLite.to(layer_4, 0.8730612244897958, {css: {scale: 0.55}, ease: Power1.easeOut}), 7.091707841031149);
+timeline.insert(TweenLite.to(layer_4, 0.8730612244897958, {css: {autoAlpha: 1.0}, ease: Power1.easeOut}), 7.10702470461869);
+timeline.insert(TweenLite.to(layer_4, 0.8730612244897958, {css: {scale: 0.5}, ease: Power1.easeOut}), 8.026036519871106);
+TweenLite.set(layer_4, {css: {autoAlpha: 0.0, x: -102, y: 410, scale: 0.5, rotationX: 0.0, rotationY: 0.0, rotationZ: 0.0}});
+var layer_5 = document.getElementById("tui-9");
+TweenLite.set(layer_5, {css: {autoAlpha: 1.0, x: -150, y: -300, scale: 0.5, rotationX: 0.0, rotationY: 0.0, rotationZ: 0.0}});
+tui_go();
+}
+tui_go();
+var imgcnt = 5;
+tweenui.imgcntd = function(e) { var id = e.id.replace(/[^0-9.]/g, "");e.parentNode.removeChild(e);document.getElementById('tui-' + id).appendChild(e); --imgcnt; if (imgcnt==0) { tui_go(); }}
+tweenui.click = function() { if (window.clickTag!="") {window.open(window.clickTag)}}
+var l = gl(["l","clicktag"]);
+if (l!="") { if (g('a')==1) { l = l + encodeURIComponent(window.clickTag) } window.clickTag=l;}
+}(window.tweenui = window.tweenui || {}));</script>
+<style type="text/css">body {
+-webkit-transform-origin: 0 0; transform-origin: 0 0;margin:0px;padding:0px;position:fixed;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing:grayscale;}#tui-animation {
+overflow: hidden;
+position: relative;
+background: #ffffff;
+width: 300px;
+height: 600px;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+-webkit-perspective: 500px;
+perspective: 500px;
+}#tui-animation div {
+-webkit-transform-style: preserve-3d;
+transform-style: preserve-3d;
+}#tui-animation img {
+display: block;
+}
+#tui-ct {
+position: absolute;
+width: 300px;
+height: 600px;
+border: 1px solid transparent;
+box-sizing: border-box;
+z-index: 6;
+cursor:pointer;
+}
+#tui-12 {
+position: absolute;
+z-index: 5;
+}
+#tui-13 {
+position: absolute;
+z-index: 4;
+margin-top: 16px;
+}
+#tui-11 {
+position: absolute;
+z-index: 3;
+}
+#tui-10 {
+position: absolute;
+z-index: 2;
+}
+#tui-9 {
+position: absolute;
+z-index: 1;
+}</style><meta name="ad.size" content="width=300,height=600"></head><body style="opacity:0"><div id="tui-animation"><div id="tui-ct" onclick="tweenui.click()"></div>
+<div id="tui-12"></div>
+<div id="tui-13"></div>
+<div id="tui-11"></div>
+<div id="tui-10"></div>
+<div id="tui-9"></div>
+</div>
+<img src="img/a14ea2d4e037336748e5f479b7dcf50a.png" onLoad="tweenui.imgcntd(this)" id="tui-img-9" />
+<img src="img/29e7bb4de06bcea3bf5473b579706f6d.png" onLoad="tweenui.imgcntd(this)" id="tui-img-10" />
+<img src="img/657afe5553fc4c2a231f960c42b4953c.png" onLoad="tweenui.imgcntd(this)" id="tui-img-11" />
+<img src="img/861751c77b4acb829c6c148ef80f3007.png" onLoad="tweenui.imgcntd(this)" id="tui-img-13" />
+<img src="img/0345ad8cb19dc43b507379e28de9d9be.png" onLoad="tweenui.imgcntd(this)" id="tui-img-12" />
+<script>
+(function(d, t) {
+var s = d.createElement(t);
+s.src = './tween.js';
+s.onload = s.onreadystatechange = function() {
+var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+tweenui.init();
+};
+var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+})(document, 'script');
+</script>
+
+</body>
+</html>
